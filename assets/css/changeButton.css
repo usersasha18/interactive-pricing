@@ -23,7 +23,7 @@
 
 .button-wrap {
     position: relative;
-    background-color: rgb(101, 230, 174); 
+    background-color: rgb(134, 134, 140);
     width: 50px;
     height: 25px;
     border-radius: 60px;
@@ -54,7 +54,7 @@
     display: block;
 }
 .changeColor {
-    background-color: rgb(134, 134, 140);
+    background-color: rgb(101, 230, 174); 
 }
 
 @media (max-width: 475px) {
