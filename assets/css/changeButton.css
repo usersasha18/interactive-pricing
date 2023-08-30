@@ -1,0 +1,70 @@
+.button-block {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1em;
+    justify-content: end;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.button-block > p {
+    font-size: 13px;
+    color: rgb(134, 134, 140);
+}
+.button-block > .discount {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgb(231, 126, 46);
+    background-color: rgb(223, 131, 97, 0.3);
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.button-wrap {
+    position: relative;
+    background-color: rgb(101, 230, 174); 
+    width: 50px;
+    height: 25px;
+    border-radius: 60px;
+    padding: 2px 3px;
+}
+
+.circle {
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    padding: 2px 5px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.change {
+    right: 3px;
+    transition: all .5s ease;
+}
+
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+}
+.changeColor {
+    background-color: rgb(134, 134, 140);
+}
+
+@media (max-width: 475px) {
+    .hidden {
+        display: block;
+    }
+    .show {
+        display: none;
+    }
+    .button-block {
+        gap: 13px;
+    }
+}

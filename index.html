@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/changeButton.css">
+  <title>Interactive pricing component</title>
+</head>
+<body>
+  <div class="container">
+     <div class="top-text">
+        <div class="title-text">Simple, traffic-based pricing</div>
+        <div class="sub-text">Sing up for our 30-day trial. No credit card required</div>
+     </div>
+
+     <div class="main-block">
+       <div class="price-block">
+          <div class="left-side">100K pageviews</div>
+          <div class="right-side">$16.00<span>/ month</span></div>
+        </div>
+        <div class="range-price">
+          <input class="range" type="range" min="0" max="100">
+        </div>
+        <div class="button-block">
+          <p>Montly Billing</p>
+          <div class="button-wrap">
+            <div class="circle"></div>
+          </div>
+          <p>Yearly Billing</p>
+          <p class="discount show">25% discount</p>
+          <p class="discount hidden">25%</p>
+        </div>
+        <hr>
+        <div class="trail-button-block">
+          <div class="advantage">
+            <ul>
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+          </div>
+          <div class="bot-button">
+            <button class="trail-button">Start my trial</button>
+          </div>
+        </div>
+     </div>
+  </div>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
