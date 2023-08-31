@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", function() {
     const minPage = 10;
     let mainBlockState = false;
 
+
     rangeInput.value = 0
     outputResult.innerHTML = `$${min}<span>/ month</span>`;
     pageView.innerHTML =   `${minPage}K pageviews`;
@@ -19,17 +20,21 @@ window.addEventListener("DOMContentLoaded", function() {
         buttonCircle.classList.toggle('change')
         mainBlock.classList.toggle('changeColor')
         mainBlockState = !mainBlockState
-        if(mainBlockState === true) {
-            salePrice()
-        }
+        applyDiscount()
     });
 
     // range result
     rangeInput.addEventListener('input', function() {
         rangeResult(rangeInput.value)
     });
+     
     function rangeResult() {
-        htmlTemplate = `$${rangeInput.value}<span>/ month</span>`
+        if(mainBlockState === true) {
+            htmlTemplate = `$${Math.floor(rangeInput.value * 0.75)}<span>/ month</span>` 
+        } else {
+            htmlTemplate = `$${rangeInput.value}<span>/ month</span>` 
+        }
+        // htmlTemplate = `$${rangeInput.value}<span>/ month</span>`  
         switch(rangeInput.value) {
             case "12":
                 pageView.innerHTML =  `${50}K pageviews`;
@@ -52,6 +57,9 @@ window.addEventListener("DOMContentLoaded", function() {
         outputResult.innerHTML = htmlTemplate
     };
 
-});
+    function applyDiscount() {
+        const price = mainBlockState ? Math.floor(rangeInput.value * 0.75) : rangeInput.value;
+        outputResult.innerHTML = `$${price}<span>/ month</span>`;
+    }
 
-// pageView result 
+});
